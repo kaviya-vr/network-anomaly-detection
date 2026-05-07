@@ -13,7 +13,7 @@ The pipeline includes:
 - DBSCAN clustering
 - Anomaly visualization
 
-The goal is to identify suspicious network behavior without supervised labels.
+The objective is to identify suspicious network behavior without relying on supervised labels.
 
 ---
 
@@ -22,9 +22,9 @@ The goal is to identify suspicious network behavior without supervised labels.
 Dataset used:
 
 - CICIDS2017
-- DDoS-Friday network traffic data
+- DDoS-Friday network traffic flow data
 
-The dataset contains flow-based network traffic features representing benign and malicious behavior.
+The dataset contains flow-based network traffic features representing both benign and malicious activity.
 
 ---
 
@@ -32,9 +32,9 @@ The dataset contains flow-based network traffic features representing benign and
 
 - Python
 - pandas
+- NumPy
 - scikit-learn
 - matplotlib
-- PyTorch
 - Jupyter Notebook
 
 ---
@@ -44,15 +44,25 @@ The dataset contains flow-based network traffic features representing benign and
 ```text
 network-anomaly-detection/
 │
+├── assets/
+│   └── dbscan_pca.png
+│
 ├── data/
+│
 ├── notebooks/
+│   └── eda.ipynb
+│
 ├── results/
+│   ├── anomaly_results.csv
 │   └── plots/
+│       └── dbscan_pca.png
+│
 ├── src/
 │   ├── preprocess.py
 │   ├── dbscan_model.py
 │   └── visualize.py
 │
+├── .gitignore
+├── README.md
 ├── main.py
-├── requirements.txt
-└── README.md
+└── requirements.txt
